@@ -1,4 +1,7 @@
 return {
+  -- {
+  --   "tamton-aquib/staline.nvim",
+  -- },
   {
     "nvim-lua/plenary.nvim",
   },

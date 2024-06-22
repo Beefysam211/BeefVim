@@ -38,12 +38,6 @@ return {
     return dashboard
   end,
   config = function(_, dashboard)
-    require("alpha").setup(dashboard.opts)
-    vim.defer_fn(function()
-      dashboard.section.terminal.opts.redraw = true
-      vim.cmd.AlphaRedraw()
-    end, 1) -- 100ms delay, adjust as needed
-
     -- close lazy and re-open when the dashboard is ready
     if vim.o.filetype == "lazy" then
       vim.cmd.close()
