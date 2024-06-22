@@ -1,8 +1,8 @@
 vim.g.mapleader = " "
 
+require "keymaps"
 require "options"
 require "autocmds"
-require "keymaps"
 
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
