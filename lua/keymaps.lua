@@ -1,5 +1,53 @@
 local map = vim.keymap.set
 
+-- debugger nvim-dap
+map("n", "<F5>", function()
+  require("dap").continue()
+end, { desc = "Debug: Continue" })
+map("n", "<F10>", function()
+  require("dap").step_over()
+end, { desc = "Debug: Step Over" })
+map("n", "<F11>", function()
+  require("dap").step_into()
+end, { desc = "Debug: Step Into" })
+map("n", "<F12>", function()
+  require("dap").step_out()
+end, { desc = "Debug: Step Out" })
+map("n", "<Leader>db", function()
+  require("dap").toggle_breakpoint()
+end, { desc = "Debug: Toggle Breakpoint" })
+map("n", "<Leader>dB", function()
+  require("dap").set_breakpoint()
+end, { desc = "Debug: Set Breakpoint" })
+map("n", "<Leader>lp", function()
+  require("dap").set_breakpoint(nil, nil, vim.fn.input "Log point message: ")
+end, { desc = "Debug: Set Log Point" })
+map("n", "<Leader>dr", function()
+  require("dap").repl.open()
+end, { desc = "Debug: Open REPL" })
+map("n", "<Leader>dl", function()
+  require("dap").run_last()
+end, { desc = "Debug: Run Last" })
+map({ "n", "v" }, "<Leader>dh", function()
+  require("dap.ui.widgets").hover()
+end, { desc = "Debug: Hover" })
+map({ "n", "v" }, "<Leader>dp", function()
+  require("dap.ui.widgets").preview()
+end, { desc = "Debug: Preview" })
+map("n", "<Leader>df", function()
+  local widgets = require "dap.ui.widgets"
+  widgets.centered_float(widgets.frames)
+end, { desc = "Debug: Frames" })
+map("n", "<Leader>ds", function()
+  local widgets = require "dap.ui.widgets"
+  widgets.centered_float(widgets.scopes)
+end, { desc = "Debug: Scopes" })
+
+map("n", ";", ":", { desc = "CMD enter command mode" })
+map("i", "jk", "<ESC>")
+
+-- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+
 map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
 map("i", "<C-e>", "<End>", { desc = "move end of line" })
 map("i", "<C-h>", "<Left>", { desc = "move left" })
@@ -46,7 +94,7 @@ map("n", "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = 
 map("n", "<leader>cm", "<cmd>Telescope git_commits<CR>", { desc = "telescope git commits" })
 map("n", "<leader>gt", "<cmd>Telescope git_status<CR>", { desc = "telescope git status" })
 map("n", "<leader>pt", "<cmd>Telescope terms<CR>", { desc = "telescope pick hidden term" })
-map("n", "<leader>th", "<cmd>Telescope themes<CR>", { desc = "telescope nvchad themes" })
+map("n", "<leader>th", "<cmd>Telescope themes<CR>", { desc = "telescope themes" })
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "telescope find files" })
 map(
   "n",

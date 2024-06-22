@@ -1,5 +1,9 @@
 vim.g.mapleader = " "
 
+require "options"
+require "autocmds"
+require "keymaps"
+
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system {
@@ -21,9 +25,6 @@ require("lazy").setup({ import = "plugins" }, {
   change_detection = {
     notify = false,
   },
-  config = function()
-    require "options"
-  end,
 })
 
 require("image").setup {
@@ -39,7 +40,3 @@ require("image").setup {
     update_on_nvim_resize = true,
   },
 }
-
-vim.schedule(function()
-  require "keymaps"
-end)

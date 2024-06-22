@@ -2,22 +2,9 @@ return {
   {
     "nvim-lua/plenary.nvim",
   },
-  {
-    "mg979/vim-visual-multi",
-  },
-  {
-    "mfussenegger/nvim-lint",
-  },
-	{
-    'andrew-george/telescope-themes',
-    config = function()
-        require('telescope').load_extension('themes')
-    end
-},
-  {
-    "nvim-telescope/telescope-file-browser.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-  },
+  -- {
+  --   "mg979/vim-visual-multi",
+  -- },
 
   {
     "tpope/vim-fugitive",
@@ -37,11 +24,8 @@ return {
     end,
   },
   {
-    "tamton-aquib/staline.nvim",
-    config = function()
-      require "configs.staline"
-      require "configs.stabline"
-    end,
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
   },
   {
     "stevearc/conform.nvim",
