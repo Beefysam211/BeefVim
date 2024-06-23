@@ -1,6 +1,12 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+-- Tabs
+map("n", "<leader>tn", ":tabnew<CR>", { desc = "Create new tab" })
+
+map("n", "<Tab>", ":tabnext<CR>", { desc = "Go to next tab" })
+map("n", "<S-Tab>", ":tabprevious<CR>", { desc = "Go to previous tab" })
+
 -- Close buffer
 map("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
 
@@ -133,6 +139,8 @@ map("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "nvimtree focus window"
 -- telescope
 map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "telescope live grep" })
 map("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "telescope find buffers" })
+map("n", "<leader>fs", "<cmd>Telescope scope buffers<CR>", { desc = "telescope find scoped buffers" })
+map("n", "<leader>fp", "<cmd>Telescope possession list<CR>", { desc = "telescope find possessions list" })
 map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "telescope help page" })
 map("n", "<leader>ma", "<cmd>Telescope marks<CR>", { desc = "telescope find marks" })
 map("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "telescope find oldfiles" })

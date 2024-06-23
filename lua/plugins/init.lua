@@ -1,4 +1,9 @@
 return {
+  {
+    "jedrzejboczar/possession.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
+  },
+  { "tiagovla/scope.nvim" },
   -- {
   --   "tamton-aquib/staline.nvim",
   -- },

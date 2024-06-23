@@ -16,6 +16,8 @@ return {
       local telescope = require "telescope"
       telescope.setup(opts)
       telescope.load_extension "themes"
+      telescope.load_extension "possession"
+      telescope.load_extension "scope"
     end,
   },
 }
