@@ -13,6 +13,7 @@ local options = {
     "zig",
     "markdown",
     "markdown_inline",
+    "python",
   },
 
   highlight = {

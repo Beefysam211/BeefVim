@@ -1,6 +1,16 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+--Obsidian
+map("n", "<leader>oc", "<cmd>lua require('obsidian').util.toggle_checkbox()<CR>", { desc = "Obsidian Check Checkbox" })
+map("n", "<leader>ot", "<cmd>ObsidianTemplate<CR>", { desc = "Insert Obsidian Template" })
+map("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", { desc = "Open in Obsidian App" })
+map("n", "<leader>ob", "<cmd>ObsidianBacklinks<CR>", { desc = "Show ObsidianBacklinks" })
+map("n", "<leader>ol", "<cmd>ObsidianLinks<CR>", { desc = "Show ObsidianLinks" })
+map("n", "<leader>on", "<cmd>ObsidianNew<CR>", { desc = "Create New Note" })
+map("n", "<leader>os", "<cmd>ObsidianSearch<CR>", { desc = "Search Obsidian" })
+map("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", { desc = "Quick Switch" })
+
 -- Tabs
 map("n", "<leader>tn", ":tabnew<CR>", { desc = "Create new tab" })
 
@@ -51,7 +61,7 @@ map("n", "<Space>bw", "<Cmd>BufferOrderByWindowNumber<CR>", opts)
 -- :BarbarEnable - enables barbar (enabled by default)
 -- :BarbarDisable - very bad command, should never be used
 
--- debugger nvim-dap
+-- Debugger nvim-dap
 map("n", "<F5>", function()
   require("dap").continue()
 end, { desc = "Debug: Continue" })

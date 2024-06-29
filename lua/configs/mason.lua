@@ -13,6 +13,8 @@ local options = {
     "bash-language-server",
     "vim-language-server",
     "zls",
+    "pyright",
+    "black",
   }, -- not an option from mason.nvim
 
   PATH = "skip",

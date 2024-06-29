@@ -1,5 +1,8 @@
 return {
   {
+    "petertriho/nvim-scrollbar",
+  },
+  {
     "jedrzejboczar/possession.nvim",
     requires = { "nvim-lua/plenary.nvim" },
   },
