@@ -2,21 +2,10 @@ return {
   {
     "petertriho/nvim-scrollbar",
   },
-  {
-    "jedrzejboczar/possession.nvim",
-    requires = { "nvim-lua/plenary.nvim" },
-  },
   { "tiagovla/scope.nvim" },
-  -- {
-  --   "tamton-aquib/staline.nvim",
-  -- },
   {
     "nvim-lua/plenary.nvim",
   },
-  -- {
-  --   "mg979/vim-visual-multi",
-  -- },
-
   {
     "tpope/vim-fugitive",
   },
