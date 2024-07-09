@@ -28,6 +28,7 @@ require("lazy").setup({ import = "plugins" }, {
   },
 })
 
+require "configs.dap"
 require "configs.lualine"
 require "configs.scope"
 

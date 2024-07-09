@@ -14,6 +14,9 @@ local options = {
     "markdown",
     "markdown_inline",
     "python",
+    "json",
+    "go",
+    "java",
   },
 
   highlight = {

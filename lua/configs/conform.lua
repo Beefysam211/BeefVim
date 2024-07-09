@@ -5,6 +5,12 @@ local options = {
     html = { "prettierd" },
     javascript = { "prettierd" },
     cpp = { "clang_format" },
+    c = { "clang_format" },
+    arduino = { "clang_format" },
+    python = { "black" },
+    bash = { "beautysh" },
+    json = { "prettierd" },
+    sh = { { "shellcheck" } },
   },
 
   format_on_save = {
