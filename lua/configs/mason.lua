@@ -20,6 +20,7 @@ local options = {
     "htmlbeautifier",
     "beautysh",
     "shellcheck",
+    "mdformat",
   }, -- not an option from mason.nvim
 
   PATH = "skip",
