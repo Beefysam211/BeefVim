@@ -2,7 +2,7 @@ local options = {
   formatters_by_ft = {
     lua = { "stylua" },
     css = { "prettierd" },
-    html = { "prettierd" },
+    html = { "htmlbeautifier" },
     javascript = { "prettierd" },
     cpp = { "clang_format" },
     c = { "clang_format" },
@@ -11,6 +11,7 @@ local options = {
     bash = { "beautysh" },
     json = { "prettierd" },
     sh = { { "shellcheck" } },
+    markdown = { "mdformat" },
   },
 
   format_on_save = {
