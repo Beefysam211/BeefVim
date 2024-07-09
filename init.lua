@@ -18,13 +18,32 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ import = "plugins" }, {
+require("lazy").setup({
+  { import = "plugins" },
+}, {
+  concurrency = jit.os:find "Windows" and (vim.loop.available_parallelism() * 2) or nil,
+  install = {
+    colorscheme = { "kanaga-wave" },
+    missing = true,
+  },
   checker = {
     enabled = true,
+    concurrency = 3,
+    frequency = 3600,
     notify = false,
   },
   change_detection = {
+    enabled = true,
     notify = false,
+  },
+  ui = {
+    border = "rounded",
+    backdrop = 100,
+  },
+  performance = {
+    cache = {
+      enabled = true,
+    },
   },
 })
 
