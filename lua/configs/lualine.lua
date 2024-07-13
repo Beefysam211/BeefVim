@@ -5,8 +5,7 @@ require("lualine").setup {
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
     disabled_filetypes = {
-      statusline = {},
-      barbar = {},
+      statusline = { "NvimTree" },
     },
     ignore_focus = {},
     always_divide_middle = true,

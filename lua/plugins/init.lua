@@ -1,5 +1,9 @@
 return {
   {
+    "lambdalisue/suda.vim",
+    lazy = false,
+  },
+  {
     "petertriho/nvim-scrollbar",
   },
   { "tiagovla/scope.nvim" },

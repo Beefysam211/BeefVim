@@ -158,3 +158,25 @@ vim.api.nvim_create_user_command("MasonUpgrade", function()
   end
   vim.cmd "doautocmd User MasonUpgradeComplete"
 end, { force = true })
+
+-- Commands to switch themes
+vim.api.nvim_create_user_command("ThemeDracula", function()
+  vim.cmd.colorscheme "dracula"
+end, {})
+
+vim.api.nvim_create_user_command("ThemeTokyonight", function()
+  vim.cmd.colorscheme "tokyonight"
+end, {})
+
+vim.api.nvim_create_user_command("ThemeCitrusZest", function()
+  vim.cmd.colorscheme "citruszest"
+end, {})
+
+vim.api.nvim_create_user_command("ThemeGithubDark", function()
+  vim.cmd.colorscheme "github_dark"
+end, {})
+
+-- Command to switch back to Kanagawa
+vim.api.nvim_create_user_command("ThemeKanagawa", function()
+  vim.cmd.colorscheme "kanagawa-wave"
+end, {})
